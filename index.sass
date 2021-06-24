@@ -1,0 +1,139 @@
+*
+	font-family: Montserrat, sans-serif
+	font-size: 12px
+	font-weight: 400
+	box-sizing: border-box
+html, body
+	height: 100%
+body
+	position: relative
+	margin: 0
+
+.wrapper
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	width: 950px
+	height: 270px
+	display: flex
+	.desc
+		padding: 22px
+		color: white
+		width: 392px
+		background-color: #0196AA
+		h1
+			margin: 0 0 21px 0
+			font-size: 40px
+			font-weight: 400
+		p
+			font-size: 20px
+			line-height: 24px
+	form
+		background-color: #1F1F1F
+		display: flex
+		flex-direction: column
+		padding: 22px 60px 28px 60px
+		width: 558px
+		.row
+			flex-wrap: nowrap
+			justify-content: space-between
+			margin-bottom: 20px
+			width: 437px
+			.col-form-label
+				color: #00C5E0
+				white-space: nowrap
+			.form-control
+				width: 310px
+				border: none
+				border-bottom: 1px solid #F3C180
+				border-radius: 0
+				background: none
+				color: #F3C180
+				font-weight: 600
+				font-size: 16px
+				line-height: 26px
+				padding: 0
+				&:active, &:focus
+					outline: none
+					border: none
+					border-bottom: 1px solid #F3C180
+					background: none
+					color: #F3C180
+				&:required:valid
+					background: url("../check.svg") no-repeat right center
+					background-size: 14px
+				&::placeholder
+					color: rgba(243, 193, 128, 0.45)
+					font-weight: 400
+		.form-check
+			width: 310px
+			margin-left: 119px
+			display: flex
+			justify-content: space-between
+			margin-bottom: 36px
+			min-height: 48px
+			&-input
+				width: 14px
+				height: 14px
+				margin-top: 0
+				border: 1px solid #00C5E0
+				border-radius: 2px
+				background: none
+				&:checked
+					background: url("../check.svg") no-repeat center center
+					background-size: 14px
+			&-label
+				width: 286px
+				white-space: normal
+				color: #F3C180
+				line-height: 16px
+				font-weight: 400
+		button
+			width: 165px
+			height: 40px
+			margin: auto
+			background-color: #0196AA
+			color: white
+			font-size: 14px
+			font-weight: 600
+			border: none
+
+@media (max-width: 768px)
+	.wrapper
+		width: 80%
+		min-width: 265px
+		height: max-content
+		flex-direction: column
+		.desc
+			padding: 16px 15px 29px 15px
+			width: 100%
+			h1
+				font-size: 32px
+				margin-bottom: 15px
+		form
+			width: 100%
+			padding: 15px 16px 40px 16px
+			.row
+				flex-direction: column
+				width: 100%
+				margin-left: 0
+				margin-right: 0
+				&:last-child
+					margin-bottom: 0
+				.col-form-label
+					padding: 0
+				.form-control
+					width: 100%
+					font-size: 14px
+			.form-check
+				width: 100%
+				margin-left: 0
+				margin-bottom: 40px
+				&-label
+					font-size: 10px
+					line-height: 14px
+					width: 90%
+					min-width: 203px
